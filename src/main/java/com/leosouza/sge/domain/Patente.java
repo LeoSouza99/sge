@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class Patente {
+public class Patente implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
