@@ -18,13 +18,15 @@ public class Missoes implements Serializable {
     private String descricao;
     private Date data;
     private Boolean conclusao;
+    private Integer jogo;
 
-    public Missoes(Long id, String nome, String descricao, Date data, Boolean conclusao) {
+    public Missoes(Long id, String nome, String descricao, Date data, Boolean conclusao, Integer jogo) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.data = data;
         this.conclusao = conclusao;
+        this.jogo = jogo;
     }
 
     public Missoes() {
@@ -68,6 +70,14 @@ public class Missoes implements Serializable {
 
     public void setConclusao(Boolean conclusao) {
         this.conclusao = conclusao;
+    }
+
+    public Integer getJogo() {
+        return jogo;
+    }
+
+    public void setJogo(Integer jogo) {
+        this.jogo = jogo;
     }
 
     @Override

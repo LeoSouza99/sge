@@ -18,13 +18,15 @@ public class Treinamentos implements Serializable {
     private String descricao;
     private Date data;
     private Boolean conclusao;
+    private Integer jogo;
 
-    public Treinamentos(Long id, String nome, String descricao, Date data, Boolean conclusao) {
+    public Treinamentos(Long id, String nome, String descricao, Date data, Boolean conclusao, Integer jogo) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.data = data;
         this.conclusao = conclusao;
+        this.jogo = jogo;
     }
 
     public Treinamentos() {
@@ -68,6 +70,14 @@ public class Treinamentos implements Serializable {
 
     public void setConclusao(Boolean conclusao) {
         this.conclusao = conclusao;
+    }
+
+    public Integer getJogo() {
+        return jogo;
+    }
+
+    public void setJogo(Integer jogo) {
+        this.jogo = jogo;
     }
 
     @Override
