@@ -8,19 +8,21 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class Patente {
+public class Recomendacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
+    private String tipo;
+    private String descricao;
 
-    public Patente(Long id, String nome) {
-        this.id = id;
-        this.nome = nome;
+    public Recomendacao() {
     }
 
-    public Patente() {
+    public Recomendacao(Long id, String tipo, String descricao) {
+        this.id = id;
+        this.tipo = tipo;
+        this.descricao = descricao;
     }
 
     public Long getId() {
@@ -31,20 +33,28 @@ public class Patente {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Patente patente = (Patente) o;
-        return id.equals(patente.id);
+        Recomendacao that = (Recomendacao) o;
+        return id.equals(that.id);
     }
 
     @Override
