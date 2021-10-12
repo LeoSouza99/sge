@@ -1,6 +1,6 @@
 package com.leosouza.sge.controller.exception;
 
-import com.leosouza.sge.services.excpetions.ObjectNotFoundException;
+import com.leosouza.sge.services.exceptions.ObjectNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

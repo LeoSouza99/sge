@@ -1,4 +1,4 @@
-package com.leosouza.sge.services.excpetions;
+package com.leosouza.sge.services.exceptions;
 
 public class ObjectNotFoundException extends RuntimeException{
 
