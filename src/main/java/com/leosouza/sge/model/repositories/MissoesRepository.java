@@ -1,4 +1,4 @@
-package com.leosouza.sge.repositories;
+package com.leosouza.sge.model.repositories;
 
 import com.leosouza.sge.domain.Missoes;
 import org.springframework.data.jpa.repository.JpaRepository;

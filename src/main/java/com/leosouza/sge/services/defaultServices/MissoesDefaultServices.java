@@ -1,7 +1,7 @@
 package com.leosouza.sge.services.defaultServices;
 
 import com.leosouza.sge.domain.Missoes;
-import com.leosouza.sge.repositories.MissoesRepository;
+import com.leosouza.sge.model.repositories.MissoesRepository;
 import com.leosouza.sge.services.MissoesServices;
 import com.leosouza.sge.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

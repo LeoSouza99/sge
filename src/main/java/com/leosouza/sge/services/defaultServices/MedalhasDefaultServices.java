@@ -1,7 +1,7 @@
 package com.leosouza.sge.services.defaultServices;
 
 import com.leosouza.sge.domain.Medalhas;
-import com.leosouza.sge.repositories.MedalhasRepository;
+import com.leosouza.sge.model.repositories.MedalhasRepository;
 import com.leosouza.sge.services.MedalhasServices;
 import com.leosouza.sge.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package com.leosouza.sge.services.defaultServices;
 
 import com.leosouza.sge.domain.Treinamentos;
-import com.leosouza.sge.repositories.TreinamentosRepository;
+import com.leosouza.sge.model.repositories.TreinamentosRepository;
 import com.leosouza.sge.services.TreinamentosServices;
 import com.leosouza.sge.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
