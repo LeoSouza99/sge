@@ -1,37 +1,35 @@
-package com.leosouza.sge.domain;
+package com.leosouza.sge.model.DTO;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.leosouza.sge.domain.Medalhas;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.io.Serializable;
+import javax.validation.constraints.NotEmpty;
 import java.util.Date;
-import java.util.Objects;
 
-@Entity
-public class Medalhas implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class MedalhasDTO {
+
     private Long id;
+
+    @NotEmpty(message = "Campo nome obrigatório.")
     private String nome;
+
+    @NotEmpty(message = "Campo descrição obrigatório.")
     private String descricao;
     private String imagem;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
     private Date data;
 
-    public Medalhas(Long id, String nome, String descricao, String imagem, Date data) {
-        this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
-        this.imagem = imagem;
-        this.data = data;
+    public MedalhasDTO() {
     }
 
-    public Medalhas() {
+    public MedalhasDTO(Medalhas medalhas) {
+        id = medalhas.getId();
+        nome = medalhas.getNome();
+        descricao = medalhas.getDescricao();
+        imagem = medalhas.getImagem();
+        data = medalhas.getData();
     }
 
     public Long getId() {
@@ -72,18 +70,5 @@ public class Medalhas implements Serializable {
 
     public void setData(Date data) {
         this.data = data;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Medalhas medalhas = (Medalhas) o;
-        return id.equals(medalhas.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 }
